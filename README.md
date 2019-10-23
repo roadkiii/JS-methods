@@ -112,3 +112,75 @@
   * Adds new elements to the beginning of an array, and returns the new length
 * valueOf()
   * Returns the primitive value of an array
+
+
+## Spread
+
+```JavaScript
+  var myName = ["Marina" , "Magdy" , "Shafiq"];
+  var newArr = [...myName ,"FrontEnd" , 24];
+  console.log(newArr) ; // ["Marina" , "Magdy" , "Shafiq" , "FrontEnd" , 24 ] ;
+```
+
+
+```JavaScript
+  function sum(x, y, z) {
+    return x + y + z;
+  }
+
+  const numbers = [1, 2, 3];
+
+  sum(...numbers);
+```
+
+
+```JavaScript
+  // For object literals (new in ECMAScript 2018):
+  let obj = { val: 'val', val2: 'val2'};
+
+  let state = { ...obj };
+
+  let newState = {
+    ...state,
+    {
+      text: action.text,
+      completed: false
+    }
+  }
+```
+
+## Rest 
+
+```JavaScript
+var myName = ["John" , "Benny" , "Billy"] ;
+
+function name(firstName, ...familyNames ){
+  console.log(firstName); // John ;
+  console.log(familyName); // [ 'Benny' , 'Billy'] ;
+}
+
+const [firstName , ...familyName] = myName ;
+
+```
+
+* Rest Parameter is collecting all remaining elements into an array .
+* Spread Operator is unpacking collected elements such as arrays into single elements .
+* [https://medium.com/javascript-in-plain-english/es6-spread-parameter-vs-rest-operator-5e3c924c4e1f](https://medium.com/javascript-in-plain-english/es6-spread-parameter-vs-rest-operator-5e3c924c4e1f)
+
+## Destructuring
+
+```JavaScript
+var a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// expected output: 10
+
+console.log(b);
+// expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// expected output: [30,40,50]
+```
