@@ -1,5 +1,7 @@
 # List of JavaScript methods
 
+## Object methods
+
 * **Object.assign()**
   * Copies the values of all enumerable own properties from one or more source objects to a target object.
 * **Object.create()**
@@ -45,7 +47,6 @@
 
 
 ## Array properties
-
 * constructor 	Returns the function that created the Array object's prototype
 * length 	Sets or returns the number of elements in an array
 * prototype 	Allows you to add properties and methods to an Array object
